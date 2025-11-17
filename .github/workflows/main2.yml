@@ -1,0 +1,13 @@
+name: deploy do app flask do ge
+on: push
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, x64]
+    steps:
+      - name: checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: construcao da imagem e execucao
+        shell: bash
+        run: bash deploy.sh
